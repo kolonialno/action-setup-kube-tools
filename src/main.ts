@@ -12,7 +12,7 @@ const defaultHelmVersion = '2.16.7'
 const defaultHelmv3Version = '3.2.1'
 const defaultKubevalVersion = '0.15.0'
 const defaultConftestVersion = '0.19.0'
-const defaultYqVersion = 'latest'
+const defaultYqVersion = '4.0.0'
 
 interface Tool {
   name: string
