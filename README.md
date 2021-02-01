@@ -3,6 +3,7 @@
 </p>
 
 # action-setup-kube-tools
+
 A GitHub Action that setup Kubernetes tools (kubectl, kustomize, helm, kubeval, conftest, yq) and cache them on the runner. It is like a typescript version of [stefanprodan/kube-tools](https://github.com/stefanprodan/kube-tools) with no command input param, but it's **very fast** as it installs the tools asynchronously.
 
 ## Usage
@@ -11,16 +12,17 @@ A GitHub Action that setup Kubernetes tools (kubectl, kustomize, helm, kubeval, 
 
 |Parameter|Required|Default Value|Description|
 |:--:|:--:|:--:|:--|
-|`kubectl`|`false`|`1.18.2`| kubectl version. kubectl vesion can be found [here](https://github.com/kubernetes/kubernetes/releases)|
-|`kustomize`|`false`|`3.5.5`| kustomize version. kustomize vesion can be found [here](https://github.com/kubernetes-sigs/kustomize/releases)|
+|`kubectl`|`false`|`1.20.1`| kubectl version. kubectl vesion can be found [here](https://github.com/kubernetes/kubernetes/releases)|
+|`kustomize`|`false`|`3.8.8`| kustomize version. kustomize vesion can be found [here](https://github.com/kubernetes-sigs/kustomize/releases)|
 |`helm`|`false`|`2.16.7`| helm version. helm vesion can be found [here](https://github.com/helm/helm/releases)|
-|`helmv3`|`false`|`3.2.1`| helm v3 version. helm v3 vesion can be found [here](https://github.com/helm/helm/releases)|
+|`helmv3`|`false`|`3.5.1`| helm v3 version. helm v3 vesion can be found [here](https://github.com/helm/helm/releases)|
 |`kubeval`|`false`|`0.15.0`| kubeval version. kubeval vesion can be found [here](https://github.com/instrumenta/kubeval/releases)|
-|`conftest`|`false`|`0.19.0`| conftest version. conftest vesion can be found [here](https://github.com/open-policy-agent/conftest/releases)|
+|`conftest`|`false`|`0.23.0`| conftest version. conftest vesion can be found [here](https://github.com/open-policy-agent/conftest/releases)|
 
 > Supported Environments: Linux
 
 ### Outputs
+
 |Parameter|Description|
 |:--:|:--|
 |`kubectl_path`| kubectl command path |
@@ -30,7 +32,6 @@ A GitHub Action that setup Kubernetes tools (kubectl, kustomize, helm, kubeval, 
 |`kubeval_path`| kubeval command path |
 |`conftest_path`| conftest command path |
 |`yq_path`| yq command path |
-
 
 ### Sample Workflow
 
@@ -79,25 +80,28 @@ Default versions for the commands will be setup if you don't give any inputs lik
         yq --version
 ```
 
-
 ## Developing the action
 
-Install the dependencies  
+Install the dependencies
+
 ```bash
 npm install
 ```
 
 Build the typescript and package it for distribution by running [ncc](https://github.com/zeit/ncc)
+
 ```bash
 npm run build && npm run pack
 ```
 
 Finally push the resutls
-```
+
+```bash
 git add dist
 git commit -a -m "prod dependencies"
 git push origin releases/v0.2.0
 ```
 
 ## Contributing
+
 Bug reports and pull requests are welcome on GitHub at https://github.com/yokawasa/action-setup-kube-tools

@@ -6,13 +6,13 @@ import * as fs from 'fs'
 import * as toolCache from '@actions/tool-cache'
 import * as core from '@actions/core'
 
-const defaultKubectlVersion = '1.18.2'
-const defaultKustomizeVersion = '3.5.5'
+const defaultKubectlVersion = '1.20.1'
+const defaultKustomizeVersion = '3.8.8'
 const defaultHelmVersion = '2.16.7'
-const defaultHelmv3Version = '3.2.1'
+const defaultHelmv3Version = '3.5.1'
 const defaultKubevalVersion = '0.15.0'
-const defaultConftestVersion = '0.19.0'
-const defaultYqVersion = '4.0.0'
+const defaultConftestVersion = '0.23.0'
+const defaultYqVersion = '4.4.1'
 
 interface Tool {
   name: string
