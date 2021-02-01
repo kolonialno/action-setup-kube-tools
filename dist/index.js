@@ -1458,13 +1458,13 @@ const util = __importStar(__webpack_require__(669));
 const fs = __importStar(__webpack_require__(747));
 const toolCache = __importStar(__webpack_require__(533));
 const core = __importStar(__webpack_require__(470));
-const defaultKubectlVersion = '1.18.2';
-const defaultKustomizeVersion = '3.5.5';
+const defaultKubectlVersion = '1.20.1';
+const defaultKustomizeVersion = '3.8.8';
 const defaultHelmVersion = '2.16.7';
-const defaultHelmv3Version = '3.2.1';
+const defaultHelmv3Version = '3.5.1';
 const defaultKubevalVersion = '0.15.0';
-const defaultConftestVersion = '0.19.0';
-const defaultYqVersion = 'latest';
+const defaultConftestVersion = '0.23.0';
+const defaultYqVersion = '4.4.1';
 const Tools = [
     {
         name: 'kubectl',
